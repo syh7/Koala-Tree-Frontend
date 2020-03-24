@@ -22,6 +22,13 @@ export class RecipeComponent {
         return array;
     }
 
+    public getRandomRecipe() {
+        let index = Math.floor(Math.random() * (recipes.length));
+        let recipe = recipes[index];
+        let text = recipe.name + ":\n" + recipe.description;
+        window.alert(text);
+    }
+
     public uniqueItems(data, key) {
         let result = [];    
         for (let i = 0; i < data.length; i++) {

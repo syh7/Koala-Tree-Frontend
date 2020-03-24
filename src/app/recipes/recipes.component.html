@@ -20,6 +20,7 @@
     <h2> Recipes </h2>
 
     <button (click)="shuffle(recipes)"> Shuffle recipes </button>
+    <button (click)="getRandomRecipe()"> Get random recipe </button>
 
     <div id="recipeDiv" *ngFor="let recipe of recipes">
         <h4>
