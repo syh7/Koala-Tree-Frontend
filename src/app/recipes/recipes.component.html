@@ -1,0 +1,28 @@
+<div id="menuDiv">
+    <h3> Menu </h3>
+    <label>
+        <input type="checkbox" value="Vega"> Vega 
+    </label>
+    
+    <label>
+        <input type="checkbox" value="Snel"> Snel
+    </label>
+
+    <label *ngFor="let category of categories">
+        <input type="checkbox" value="{{category}}" ng-model="category.selected">
+        {{ category}}
+    </label>
+</div>
+
+<div id="contentDiv">
+    <h2> Recipes </h2>
+    <div id="recipeDiv" *ngFor="let recipe of recipes">
+        <h4>
+            {{ recipe.name }}
+        </h4>
+        
+        <p *ngIf="recipe.description">
+            {{recipe.description}}
+        </p>
+    </div>
+</div>
