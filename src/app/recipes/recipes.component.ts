@@ -10,17 +10,26 @@ import { recipes } from '../recipes';
 export class RecipeComponent {
     recipes = recipes;
 
-    categories = uniqueItems(recipes, 'category');
+    categories = this.uniqueItems(recipes, 'category');
 
-}
-
-let uniqueItems = function (data, key) {
-    let result = [];    
-    for (let i = 0; i < data.length; i++) {
-        let value = data[i][key];
-        if (result.indexOf(value) == -1) {
-            result.push(value);
+    public shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let x = array[i];
+            array[i] = array[j];
+            array[j] = x;
         }
+        return array;
     }
-    return result;
-};
+
+    public uniqueItems(data, key) {
+        let result = [];    
+        for (let i = 0; i < data.length; i++) {
+            let value = data[i][key];
+            if (result.indexOf(value) == -1) {
+                result.push(value);
+            }
+        }
+        return result;
+    }
+}
