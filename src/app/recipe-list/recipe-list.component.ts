@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
-import { recipes } from '../recipes';
+import {Recipe} from './recipe';
+import { RecipeService } from './recipe-service';
 
 @Component({
     selector: 'app-recipe-list',
@@ -8,23 +8,17 @@ import { recipes } from '../recipes';
     styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent {
-    recipes = recipes;
+    recipes : Recipe[];
+    categories : String[];
 
-    categories = this.uniqueItems(recipes, 'category');
-
-    public shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            let x = array[i];
-            array[i] = array[j];
-            array[j] = x;
-        }
-        return array;
+    constructor(recipeService : RecipeService){
+        this.recipes = recipeService.getRecipes();
+        this.categories = this.uniqueItems(this.recipes, 'category');
     }
 
-    public getRandomRecipe() {
-        let index = Math.floor(Math.random() * (recipes.length));
-        let recipe = recipes[index];
+    public getRandomRecipe() : void {
+        let index = Math.floor(Math.random() * (this.recipes.length));
+        let recipe = this.recipes[index];
         let text = recipe.name + ":\n" + recipe.description;
         window.alert(text);
     }
@@ -38,5 +32,15 @@ export class RecipeListComponent {
             }
         }
         return result;
+    }
+
+    public shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let x = array[i];
+            array[i] = array[j];
+            array[j] = x;
+        }
+        return array;
     }
 }
