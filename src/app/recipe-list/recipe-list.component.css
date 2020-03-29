@@ -5,14 +5,19 @@ h2 {
     text-align: center;
 }
 
+.recipe-container {
+    display: flex;
+}
 
 .sidebar {
+    background-color: lightgrey;
     position: fixed;
-    left: 2%;
     width: 20%;
+    height: 100%;
 }
 .content {
     position: fixed;
-    right: 0;
     width: 80%;
+    height: 100%;
+    right: 0;
 }
