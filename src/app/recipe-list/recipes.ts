@@ -122,7 +122,7 @@ export const RECIPES : Recipe[] = [
     },
     {
         name : 'Pasta pesto à la Loes',
-        description : '',
+        description : 'Pasta/knoflook/gedroogde tomaten/champignons/pesto/creme fraiche/zwarte olijven',
         category : 'Pasta',
         vegan : true,
         quick : false,
