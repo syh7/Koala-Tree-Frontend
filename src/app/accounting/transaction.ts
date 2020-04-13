@@ -1,11 +1,11 @@
 export interface Transaction {
-    id: number;
+    id?: number;
     amountTotal: number;
     amountSjoerd: number;
     amountLoes: number;
     amountAll: number;
     category: string;
-    message: string;
+    message?: string;
     date: Date;
-    createdDateTime: Date;
+    createdDateTime?: Date;
 }
