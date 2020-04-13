@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Recipe} from './recipe';
-import { RecipeService } from './recipe-service';
+import { Recipe } from '../recipe';
+import { RecipeService } from '../recipe-service';
 
 @Component({
     selector: 'app-recipe-list',
@@ -8,15 +8,15 @@ import { RecipeService } from './recipe-service';
     styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent {
-    recipes : Recipe[];
-    categories : String[];
+    recipes: Recipe[];
+    categories: String[];
 
-    constructor(recipeService : RecipeService){
+    constructor(recipeService: RecipeService) {
         this.recipes = recipeService.getRecipes();
         this.categories = this.uniqueItems(this.recipes, 'category');
     }
 
-    public getRandomRecipe() : void {
+    public getRandomRecipe(): void {
         let index = Math.floor(Math.random() * (this.recipes.length));
         let recipe = this.recipes[index];
         let text = recipe.name + ":\n" + recipe.description;
@@ -24,7 +24,7 @@ export class RecipeListComponent {
     }
 
     public uniqueItems(data, key) {
-        let result = [];    
+        let result = [];
         for (let i = 0; i < data.length; i++) {
             let value = data[i][key];
             if (result.indexOf(value) == -1) {
