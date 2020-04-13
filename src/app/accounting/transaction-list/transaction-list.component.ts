@@ -13,7 +13,7 @@ export class TransactionListComponent {
 
     constructor(private transactionService : TransactionService, private loggerService : LoggerService){
         this.transactionService = transactionService;
-        this.loggerService.log("Constructor");
+        this.loggerService.log("TransactionListComponent constructor");
         this.updateTransactions();
     }
 
