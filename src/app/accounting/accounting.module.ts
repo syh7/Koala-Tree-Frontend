@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { AccountingRoutingModule } from './accounting-routing.module';
 import { CommonModule } from '@angular/common';
+
+import { AccountingRoutingModule } from './accounting-routing.module';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import { NewTransactionComponent } from './new-transaction/new-transaction.component';
 
 @NgModule({
     imports: [
@@ -9,7 +11,8 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
         AccountingRoutingModule
     ],
     declarations: [
-        TransactionListComponent
+        TransactionListComponent,
+        NewTransactionComponent
     ]
 })
 export class AccountingModule { }
