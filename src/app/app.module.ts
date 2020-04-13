@@ -4,9 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './commons/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RecipesModule } from './recipe/recipes.module';
-import { AccountingModule } from './accounting/accounting.module';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,7 +13,6 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RecipesModule,
     AppRoutingModule
   ],
   providers: [],
