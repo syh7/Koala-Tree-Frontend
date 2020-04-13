@@ -1,32 +1,29 @@
-<div class="transaction">
-    <mat-form-field>
-        <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+<div class="form">
+    <div>
+        <label>Choose a date</label>
+    </div>
     
-    <mat-form-field appearance="fill">
-        <mat-label>Category</mat-label>
-        <mat-select>
-            <mat-option value="GROCERIES">Boodschappen</mat-option>
-            <mat-option value="PRESENTS">Cadeaus</mat-option>
-            <mat-option value="DATES">Dates</mat-option>
-            <mat-option value="OTHER">Overig</mat-option>
-        </mat-select>
-    </mat-form-field>
+    <div>
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect">
+            <option value="GROCERIES">Boodschappen</option>
+            <option value="PRESENTS">Cadeaus</option>
+            <option value="DATES">Dates</option>
+            <option value="OTHER">Overig</option>
+        </select>
+    </div>
 
     <br>
 
-    <mat-form-field>
-        <mat-label>Amount total</mat-label>
+    <div>
+        <label>Amount total</label>
         <input type="number" placeholder="Enter the amount"> 
-    </mat-form-field>
+    </div>
 
     <br>
 
-    <mat-form-field>
-        <mat-label>Optional message</mat-label>
-        <input matInput placeholder="Message">
-    </mat-form-field>
+    <div>
+        <label for="message">Optional message</label>
+        <input type="text" id="message" placeholder="Message">
+    </div>
 </div>
