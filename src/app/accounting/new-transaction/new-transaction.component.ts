@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Transaction } from '../transaction';
+import { Transaction } from '../models/transaction';
 import { TransactionService } from '../transaction-service';
 import { LoggerService } from 'src/app/commons/logger/logger-service';
 

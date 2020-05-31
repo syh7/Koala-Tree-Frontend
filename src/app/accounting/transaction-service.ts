@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
-import { Transaction } from './transaction';
+import { Transaction } from './models/transaction';
 import { LoggerService } from '../commons/logger/logger-service';
 
 @Injectable({

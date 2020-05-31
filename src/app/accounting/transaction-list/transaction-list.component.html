@@ -1,6 +1,11 @@
 <div id="transactionListDiv" *ngFor="let transaction of transactions">
     <div class="transactionDiv">
-        {{transaction.date}} <br>
-        {{transaction.amountTotal}}
+        Date: {{transaction.date}} <br>
+        <div id="entryListDiv" *ngFor="let entry of transaction.entries">
+            <div class="entryDiv">
+                User: {{entry.user}} <br>
+                Amount: {{entry.amount}}
+            </div>
+        </div>
     </div>
 </div>
