@@ -12,7 +12,6 @@ export class NewTransactionComponent {
     transactions : Transaction[];
 
     constructor(private transactionService : TransactionService, private loggerService : LoggerService){
-        this.transactionService = transactionService;
-        this.loggerService.log("TransactionDetailComponent constructor");
+        this.loggerService.log("NewTransactionComponent constructor");
     }
 }
