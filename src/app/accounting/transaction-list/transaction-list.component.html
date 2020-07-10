@@ -1,3 +1,9 @@
+
+    <h3> Transactions: </h3>
+    <div class="button">
+        <button [routerLink]="'new'"> Click to make a new transaction</button>
+    </div>
+
 <div id="transactionListDiv" *ngFor="let transaction of transactions">
     <div class="transactionDiv">
         Date: {{transaction.date}} <br>
