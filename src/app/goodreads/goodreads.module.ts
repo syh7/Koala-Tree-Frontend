@@ -11,9 +11,6 @@ import { GoodreadsService } from './goodreads-service';
     ],
     declarations:[
         GoodreadsOverviewComponent
-    ],
-    providers:[
-        GoodreadsService
     ]
 })
 export class GoodreadsModule{}
