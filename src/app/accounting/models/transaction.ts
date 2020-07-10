@@ -3,7 +3,6 @@ import { User } from './user';
 
 export interface Transaction {
     id?: number;
-    category: Category;
     message?: string;
     date: Date;
     entries: Entry[];
@@ -13,6 +12,7 @@ export interface Transaction {
 export interface Entry {
     id?: number;
     user: User;
+    category: Category;
     amount: number;
     createdDateTime?: Date;
 }
